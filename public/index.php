@@ -26,8 +26,6 @@ $routes->add('PageProfession', new Route('admin/professions/{id}', ['_controller
 $routes->add('PageSearch', new Route('/search/', ['_controller' => '\Controllers\SearchController', '_method' => 'search']));
 $routes->add('PageHome', new Route('/home/', ['_controller' => '\Controllers\SearchController', '_method' => 'home']));
 
-
-
 $routes->add('AddCountry', new Route('admin/countries/add', ['_controller' => '\Controllers\CountryController', '_method' => 'add']));
 $routes->add('ListCountry', new Route('admin/countries/', ['_controller' => '\Controllers\CountryController', '_method' => 'showAll']));
 $routes->add('PageCountry', new Route('admin/countries/{id}', ['_controller' => '\Controllers\CountryController', '_method' => 'showOne']));
@@ -39,22 +37,17 @@ $routes->add('EditEntity', new Route('admin/entities/{id}/edit', ['_controller' 
 $routes->add('PageEntityShow', new Route('/entities/{id}', ['_controller' => '\Controllers\EntityController', '_method' => 'showOne']));
 
 $routes->add('ListReview', new Route('/entities/{id}/reviews', ['_controller' => '\Controllers\EntityController', '_method' => 'showReviews']));
-########$routes->add('PageReview', new Route('/entities/{id}/reviews/{review_id}', ['_controller' => '\Controllers\EntityController', '_method' => 'showReviews']));
 $routes->add('AddReview', new Route('/entities/{id}/reviews/add', ['_controller' => '\Controllers\EntityController', '_method' => 'createReview']));
-
 
 $routes->add('AddTag', new Route('admin/tags/add', ['_controller' => '\Controllers\TagController', '_method' => 'add']));
 
-$routes->add('Logout', new Route('/logout/', ['_controller' => '\Controllers\UserController', '_method' => 'user_logout']));
+$routes->add('Registration', new Route('/registration', ['_controller' => '\Controllers\UserController', '_method' => 'user_register']));
 $routes->add('Login', new Route('/login/', ['_controller' => '\Controllers\UserController', '_method' => 'user_login']));
+$routes->add('Logout', new Route('/logout/', ['_controller' => '\Controllers\UserController', '_method' => 'user_logout']));
 $routes->add('EditUser', new Route('users/{id}/edit', ['_controller' => '\Controllers\UserController', '_method' => 'user_update']));
 $routes->add('PageUser', new Route('/users/{id}', ['_controller' => '\Controllers\UserController', '_method' => 'showOne']));
 $routes->add('ListReviewUser', new Route('/users/{id}/reviews/', ['_controller' => '\Controllers\UserController', '_method' => 'showAllReviews']));
-#$routes->add('PageUser', new Route('/users/{id}/reviews/{review}', ['_controller' => '\Controllers\UserController', '_method' => 'showOne']));
 $routes->add('EditReviewUser', new Route('/users/{id}/reviews/{reviewid}/edit', ['_controller' => '\Controllers\UserController', '_method' => 'editReview']));
-
-
-$routes->add('Registration', new Route('/registration', ['_controller' => '\Controllers\UserController', '_method' => 'user_register']));
 
 
 // Create a request context
