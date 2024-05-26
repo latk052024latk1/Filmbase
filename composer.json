@@ -1,0 +1,14 @@
+{
+
+    "autoload": {
+        "psr-4": {
+            "Models\\": "src/Models/",
+            "Controllers\\": "src/Controllers/"
+        }
+    },
+    "require": {
+        "symfony/routing": "^7.0",
+"symfony/http-foundation": "^5.0"
+    }
+}
+

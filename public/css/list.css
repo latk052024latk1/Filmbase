@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adjusted alignment to center */
+    min-height: 70vh;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%; /* Adjusted width for better responsiveness */
+    background-color: #fff; /* Changed background color to white for cleaner appearance */
+    padding: 20px; /* Added padding for spacing */
+    border-radius: 8px; /* Added border-radius for softer edges */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box-shadow for depth */
+}
+
+span {
+    margin-bottom: 250px; /* Added margin-bottom for spacing */
+    text-align: top; /* Adjusted text alignment to left */
+    margin-left: 20px; /* Moved the span a bit to the left */
+}
+
+ol {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Added margin-bottom for spacing */
+}
+
+a {
+    text-decoration: none;
+    color: #333; /* Changed link color to a darker shade */
+}
+
+a:hover {
+    color: #222; /* Darker shade for hover state */
+}

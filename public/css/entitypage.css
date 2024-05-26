@@ -1,0 +1,98 @@
+
+        .image-cell {
+            width: 256px; /* Adjust the width as needed */
+        height: 100%;
+        }
+        .image-cell img {
+            width: 100%;
+            height: auto;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+h2{
+    text-align:center;
+}
+    
+    form{
+    padding:30px;
+    margin:0 auto;
+    text-align:center;
+    border: 4px darkgray groove;
+    width:50%;
+    box-shadow:  5px 5px  groove;
+    border-radius:10% 10% 5% 5%;
+
+}
+select {
+            width:75%;
+            height:15%;
+            font-size:14px;
+            margin-bottom:30px;
+        }
+        input [type="text"] {
+            width:75%;
+            text-align:left;
+        }
+        .form-control{
+            text-align:left;
+            max-width:100%;
+            width: 75%;
+            margin-bottom: 30px;
+
+        }
+
+        .fieldWrapper{
+            display:flex;
+            flex-direction: column;
+            width: 25%; height:auto;
+            justify-content: center;
+            align-items: center;
+        }
+        #myDIV,
+#myDIV1,
+#myDIV2,
+#myDIV3,
+#DIVcharacter,
+#DIVreview {
+    text-align: center;
+    margin: 0 auto;
+    display: none; /* Initially hidden */
+    padding-bottom:100px;
+}
+
+
+        input[type='file'] {
+
+        }
+        .buttonForm {
+            background-color: #FFFFCC;
+            padding-bottom:50px;
+        }
+        .section-vse{
+            width:1040px;
+            margin:0 auto;
+            height:150px;
+
+        }
+        .section-data{
+            width:60%;
+            margin:0 auto;
+        }
+
+        tr{
+            text-align: center;
+            padding: 30px;
+        }
+        thead{
+            text-align: center;
+        }
+        td,
+        th {
+            width: 120px;
+            height: 60px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }

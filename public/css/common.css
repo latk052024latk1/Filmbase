@@ -1,0 +1,124 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 0;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            max-width: 100%;
+        }
+
+table {
+    margin:auto; 
+    padding: auto; 
+    width: 100%; 
+    text-align:center;
+}
+
+button {
+    width:45%; 
+    text-align: center; 
+    margin: 0 auto; 
+    display: block;
+}
+#myDIV {
+    text-align:center;
+    margin:0 auto;
+    display: none;
+}
+h2 {
+    text-align:center;
+}
+form {
+    text-align:left; 
+    border:1px dashed red; 
+    width:25%; 
+    margin: 0 auto;
+}
+input [type=text]{
+    width:90%; 
+    margin:0 auto;
+}
+.left-aligned-form {
+        text-align: left;
+    }
+    /* Assuming common styles are already defined in your common.css file */
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .radio-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 25%; /* Adjust the margin as needed */
+    }
+
+    .gender-radio {
+        flex: 0 0 45%; /* Set the width of each radio container */
+    }
+
+    .radio-container input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 85%;
+    }
+
+    /* Adjust this margin as needed to separate the form and results */
+    #results {
+        margin-top: 20px;
+    }
+    
