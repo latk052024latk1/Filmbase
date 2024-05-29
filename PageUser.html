@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../css/userreview.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<table style="margin:auto; padding: auto; width: 100%; text-align:center;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Joined</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td><?php echo $user_data["user_id"]; ?></td>
+                <td><?php echo $user_data["username"]; ?></td>
+                <td><?php echo $user_data["email"]; ?></td>
+                <td><?php echo $user_data["date_joined"]; ?></td>
+            <?php if ($_SESSION["user_id"] === $user_data['user_id']) { ?>
+                <td><button><a href="../users/<?php echo $user_data['user_id']; ?>/edit">Edit</a></button></td> 
+            <?php } ?>
+            </tr>
+    </tbody>
+</table>
+
+<h2>Reviews</h2>
+<?php
+foreach($review_top as $t){?>
+    <article><b><a href="../entities/<?php echo $t['review_entity']?>">
+<?php
+echo $t["name"];?></a></b><br>
+<b><?php echo $t["review_name"];?></b></br>
+<span style="float:right"><?php echo $t["review_date"] ?></span>
+<p><?php 
+echo $t["review_text"]; ?></p>
+
+<?php if ($_SESSION["user_id"] === $t["review_author"]){ ?>
+<a href="../users/<?php echo $id; ?>/reviews/<?php echo $t['review_id'] ?>/edit">
+    <?php
+    echo "Edit";?></a> <?php } ?>
+</article><?php
+}
+?>
+
+</body>
+</html>

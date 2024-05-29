@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../../css/list.css";
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+    
+
+    <span>In our database, there is information about the following professions:</span>
+<div class="container1">    <ol>
+
+        <?php foreach ($professions as $p){ ?>
+<li><a href="<?php echo $p['profession_id'] ?>">
+                <?php echo $p['profession_name']; } ?></a></li>
+</ol>
+</div>
+
+</body>
+</html>
