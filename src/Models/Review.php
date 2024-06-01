@@ -149,11 +149,11 @@ class Review extends BaseModel
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }
-
+    
     public function selectAllByAuthor($author_id){
-        $sql_query = "SELECT reviews.*, entities.name FROM reviews r
-                      INNER JOIN entities e ON entities.entity_id = reviews.review_entity
-                      WHERE review_author = :author ORDER BY reviews.review_date DESC";
+        $sql_query = "SELECT r.*, e.name FROM reviews r
+                      INNER JOIN entities e ON e.entity_id = r.review_entity
+                      WHERE review_author = :author ORDER BY r.review_date DESC";
         
         $stmt =  $this->getDb()->connect()->prepare($sql_query);
         $stmt->bindParam(":author", $author_id, PDO::PARAM_INT);

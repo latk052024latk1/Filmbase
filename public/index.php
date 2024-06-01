@@ -18,6 +18,8 @@ $routes->add('AddPerson', new Route('admin/people/add', ['_controller' => '\Cont
 $routes->add('ListPerson', new Route('admin/people/', ['_controller' => '\Controllers\PersonController', '_method' => 'showAll']));
 $routes->add('PagePerson', new Route('admin/people/{id}', ['_controller' => '\Controllers\PersonController', '_method' => 'showOneAdmin']));
 $routes->add('PagePerson1', new Route('/people/{id}', ['_controller' => '\Controllers\PersonController', '_method' => 'showOne']));
+$routes->add('Filmography', new Route('/people/{id}/filmography', ['_controller' => '\Controllers\PersonController', '_method' => 'filmography']));
+
 
 $routes->add('AddProfession', new Route('admin/professions/add', ['_controller' => '\Controllers\ProfessionController', '_method' => 'add']));
 $routes->add('ListProfession', new Route('admin/professions/', ['_controller' => '\Controllers\ProfessionController', '_method' => 'showAll']));

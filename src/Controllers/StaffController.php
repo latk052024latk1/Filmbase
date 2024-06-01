@@ -31,6 +31,10 @@ class StaffController extends BaseController
         return $this->getModel()->selectByEntity($id);
     }
     
+    public function selectByPerson($id){ // Select records by a person.
+        return $this->getModel()->selectByPerson($id);
+    }
+    
 }
 
 ?>

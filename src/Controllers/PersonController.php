@@ -30,6 +30,7 @@ class PersonController extends BaseController
 
         $this->getModel()->setId($id);
         $people_data = $this->getModel()->selectOne();
+        
         include_once "../src/Views/PagePersonShow.php";
     }
 
@@ -51,6 +52,21 @@ class PersonController extends BaseController
         include_once "../src/Views/PagePerson.html";
 
     }
+
+    public function filmography($id){
+
+        session_start();
+        $this->isSession();
+
+        $this->getModel()->setId($id);
+        $people_data = $this->getModel()->selectOne();
+                
+        $staff = new StaffController();
+        $staff_data = $staff->selectByPerson($id);
+
+        include_once "../src/Views/ListStaffPerson.php";
+    }
+
 
     public function add(){ // Add a record and then update the file path.
         session_start();
