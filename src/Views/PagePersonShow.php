@@ -36,6 +36,8 @@
             </tbody>
         </table>
 
+        <button><a href="../people/<?php echo $people_data[0]["person_id"]; ?>/filmography">Filmography</a></button>
+
     </div>
 
 </body>
