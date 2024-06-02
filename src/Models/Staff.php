@@ -98,7 +98,14 @@ class Staff extends BaseModel
 
     public function selectByPerson($id){ // Select a record by a person_id. 
         $sql_query = "SELECT e.*, p.profession_name, 
-                      pe.person_name, pe.person_surname, y.year FROM entities e
+                      pe.person_name, pe.person_surname, y.year,
+                      
+                      CASE 
+                          WHEN p.profession_name = 'Actor' THEN c.character_name
+                          ELSE NULL
+                      END AS character_name             
+                      
+                      FROM entities e
                       INNER JOIN entities_people_professions staff ON
                       staff.entity_id = e.entity_id
                       INNER JOIN professions p ON
@@ -107,8 +114,10 @@ class Staff extends BaseModel
                       staff.person_id = pe.person_id
                       INNER JOIN years y ON
                       y.year_id = e.year
+                      INNER JOIN characters c ON
+                      c.actor = staff.person_id
                       WHERE staff.person_id = :person_id";
-           
+        
         $stmt = $this->getDb()->connect()->prepare($sql_query);
 
         $stmt->bindParam(':person_id', $id, PDO::PARAM_INT);
