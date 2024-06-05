@@ -26,6 +26,6 @@ A web application that represents a database of stuff, related to films/series, 
 
 ## Technologies Used
 
-- PHP
+- PHP 8.x
 - Symfony routing component
-- MySQL
+- MySQL 8.x
